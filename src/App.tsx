@@ -1,24 +1,25 @@
 import { useState } from 'react'
-import { BiReset, BiPlus, BiMinus } from 'react-icons/bi'
+// import { BiReset, BiPlus, BiMinus } from 'react-icons/bi'
+
+import { Previewer, Editor } from './components'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [text, setText] = useState<string>('')
+  const styles = 'dark size'
   return (
     <>
       <h1>Markdown Previewer</h1>
-      <div className='display'> {count}</div>
-      <div className=''>
-        <button onClick={() => setCount((count) => count + 1)}>
-          <BiPlus />
-        </button>
-        <button onClick={() => setCount((count) => count - 1)}>
-          <BiMinus />
-        </button>
-        <button onClick={() => setCount(0)}>
-          <BiReset />
-        </button>
-      </div>
+      <main className='App'>
+        <Editor
+          styleNames={styles}
+          text={text}
+          setText={setText}
+        />
+        <Previewer
+          styleNames={styles}
+          text={text}
+        />
+      </main>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import './previewer.scss'
 import PropTypes from 'prop-types'
-
+import ReactMarkdown from 'react-markdown'
 // you may need to install `yarn add prop-types`
 
 type previewerProps = {
@@ -9,13 +9,7 @@ type previewerProps = {
 }
 
 const Previewer = ({ styleNames, text }: previewerProps) => {
-  return (
-    <div className={`previewer ${styleNames}`}>
-      <h2>Previewer</h2>
-      <p>{text}</p>
-      {/* add your code here  */}
-    </div>
-  )
+  return <ReactMarkdown className={`previewer ${styleNames}`}>{text}</ReactMarkdown>
 }
 
 Previewer.propTypes = {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { Previewer, Editor, Previewer2 } from './components'
+import { Editor, Previewer2 } from './components'
 
 function App() {
   const [text, setText] = useState<string>('')
@@ -28,7 +28,6 @@ function App() {
         />
 
         <Previewer2
-          id='previewer'
           styleNames={styles}
           text={text}
         />

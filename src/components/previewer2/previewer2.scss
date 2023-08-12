@@ -1,6 +1,6 @@
 @import '../../assets/styles/colors';
 
-section.previewer {
+section.previewer2 {
   background-color: inherit;
   color: $txtClr;
   // display: flex;
@@ -8,15 +8,17 @@ section.previewer {
   // justify-content: space-between;
   gap: 2rem;
   border-left: 5px solid $txtClr;
-  padding-left: 2rem;
 }
 
 #preview {
+  padding: 3rem;
   pre {
     color: $txtClr;
+    font-size: 1.4rem;
   }
   code {
     color: $txtClr;
+    font-size: 1.4rem;
   }
   p {
     color: $txtClr;
@@ -43,8 +45,11 @@ section.previewer {
     padding: 8px; /* Add some padding for better spacing */
     text-align: left; /* Align text to the left */
     color: $txtClr;
+    font-size: 1.4rem;
   }
-  ul, ol {
+  ul,
+  ol {
     color: $txtClr;
+    font-size: 1.4rem;
   }
 }

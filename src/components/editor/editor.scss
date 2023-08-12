@@ -1,4 +1,60 @@
-.editor {
-   background-color: inherit;
-   color: inherit;
+@import '../../assets/styles/colors';
+.editor-wrapper {
+  background-color: inherit;
+  color: inherit;
+  font-size: 1.6rem;
+  width: 100%;
+  max-height: 120%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  form {
+    width: 100%;
+    max-height: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid pink;
+    gap: 2rem;
+    textarea#editor {
+      border: none;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      width: 100%;
+      min-height: 90vh;
+      padding: 1rem;
+      background-color: darken($bgClr, 5%);
+
+      color: $txtClr;
+      overflow: auto;
+      outline: none;
+      resize: none;
+    }
+    button#save-btn {
+      padding: 1rem 1.5rem;
+      font-size: 1.6rem;
+      color: $txtClr;
+      background-color: #00a6a0;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      max-width: fit-content;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 250ms ease-in;
+      &:hover {
+        filter: contrast(1.5);
+      }
+      &:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        &:hover {
+          filter: contrast(1);
+        }
+      }
+    }
+  }
 }
